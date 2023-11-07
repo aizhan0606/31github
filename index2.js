@@ -1,5 +1,5 @@
 const model = [
-    {type: 'title', value: 'Hello World from JS'},
+    {type: 'title', value: 'Hello Friends'},
     {type: 'text', value: 'here we go with some text'},
     {type: 'columns', value: [
         '111111111',
@@ -7,7 +7,7 @@ const model = [
         '333333333',
         '444444444'
     ]},
-    {type: 'image', value: './images/image.png'}
+    {type: 'image', value: './images/image.jpg'}
 ]
 
 const $site = document.querySelector('#site');
