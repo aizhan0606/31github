@@ -6,7 +6,8 @@ const model = [
         '222222222',
         '333333333',
         '444444444'
-    ]}
+    ]},
+    {type: 'image', value: './images/image.png'}
 ]
 
 const $site = document.querySelector('#site');
@@ -20,7 +21,10 @@ model.forEach(block =>{
         html = text(block)
     } else if (block.type === 'columns'){
         html = columns(block)
+    } else if (block.type === 'image'){
+        html = image(block)
     }
+
     $site.insertAdjacentHTML('beforeend', html)
 })
 
@@ -45,23 +49,18 @@ function text(block){
 }
 
 function columns(block){
-    let html = ''
-    block.value.forEach(item => {
-       html += `
-       <div class="col-sm">
-        ${item}
-   </div>
-       ` 
-    })
+const html = block.value.map(item => `<div class="col-sm">${item}</div>`)
    return`
    <div class="row">
-               
-                <div class="col-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, consequatur.
-                </div>
-                <div class="col-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, consequatur.
-                </div>
-            </div>
+        ${html.join('')}
+   </div>
    ` 
+}
+
+function image(block){
+    return `
+    <div class = "row">
+    <img src = "${block.value}"/>
+    </div>
+    `
 }
