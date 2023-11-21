@@ -1,4 +1,4 @@
-const current_year = 2023;
+/* const current_year = 2023;
 const correct_answer = 'Ответ правильный';
 const error_answer = 'Ответ неправильный';
 
@@ -21,4 +21,5 @@ buttonNode.addEventListener('click', function(){
         output = error_answer
     }
    outputNode.innerHTML= output;
-});
+}); */
+
