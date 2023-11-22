@@ -23,7 +23,10 @@ buttonNode.addEventListener('click', function(){
    outputNode.innerHTML= output;
 }); */
 
-let display = document.querySelector(".display");
+//Калькулятор 
+
+
+/* let display = document.querySelector(".display");
 let buttons = Array.from(document.querySelectorAll(".button"));
 buttons.map((button) => {
     button.addEventListener("click", (e) => {
@@ -53,4 +56,5 @@ buttons.map((button) => {
                 }
         }
     });
-});
+}); */
+
